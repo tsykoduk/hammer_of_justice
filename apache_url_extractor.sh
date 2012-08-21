@@ -6,7 +6,8 @@
 #Target servers to get logs from
 servers=("server1" "server2")
 
-#We need to get a few dates. We are looking for the 24 hour period before today ("yesterday"), so we have to do a little bit of cyphering to get it sorted out. Note, there are 86400 seconds in 24 hours.
+#We need to get a few dates. We are looking for the 24 hour period before today ("yesterday"), 
+#so we have to do a little bit of cyphering to get it sorted out. Note, there are 86400 seconds in 24 hours.
 #This normally works. Sometimes it's a wee bit off.
 unix_date=`date +"%s"`
 start_date_unix=$(($unix_date - 86400)) 
@@ -48,7 +49,8 @@ cat *.log > big_list.txt
 #cat big_list.txt - Read the file
 #| tr -d - | cut -d\" -f2 Grab the correct columns
 #| sed 's/GET //' | sed 's/ HTTP\/1.1//' | grep -v "POST" Look for gets that are not posts
-#| grep -v "zip"| grep -v "\/pulse" | grep -v "curl" You can add things like this to remove specific items or urls. For example here we are removing zip files, curl and the path /pulse
+#| grep -v "zip"| grep -v "\/pulse" | grep -v "curl" You can add things like this to remove specific items or urls. 
+#For example here we are removing zip files, curl and the path /pulse
 #| grep -v '^$' >list.txt Finish up
 
 
