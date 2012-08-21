@@ -30,10 +30,10 @@ for server in ${servers[@]}
 do
 	#tested awk to see if it could handle leap year. it could not. it's also much slower then sed
 
-	#       awk '/${sed_string/' /path/to/logstash/${server}/apache2/access.log >> ${server}_access.log
-	#       awk '/${sed_string/' /path/to/logstash/${server}/apache2/access.log.1 >> ${server}_access.log
-	#       awk '/${sed_string/' /path/to/logstash/${server}/apache2/ssl_access.log >> ${server}_access.log
-	#       awk '/${sed_string/' /path/to/logstash/${server}/apache2/ssl_access.log.1 >> ${server}_access.log
+	#       awk '/${sed_string}/' /path/to/logstash/${server}/apache2/access.log >> ${server}_access.log
+	#       awk '/${sed_string}/' /path/to/logstash/${server}/apache2/access.log.1 >> ${server}_access.log
+	#       awk '/${sed_string}/' /path/to/logstash/${server}/apache2/ssl_access.log >> ${server}_access.log
+	#       awk '/${sed_string}/' /path/to/logstash/${server}/apache2/ssl_access.log.1 >> ${server}_access.log
 
 	sed -n "/${sed_string}/p" /path/to/logstash/${server}/apache2/access.log >> ${server}_access.log
 	sed -n "/${sed_string}/p" /path/to/logstash/${server}/apache2/access.log.1 >> ${server}_access.log
