@@ -35,6 +35,9 @@ do
 	#       awk '/${sed_string}/' /path/to/logstash/${server}/apache2/ssl_access.log >> ${server}_access.log
 	#       awk '/${sed_string}/' /path/to/logstash/${server}/apache2/ssl_access.log.1 >> ${server}_access.log
 
+
+	# here we are getting the last two log files (in case there was a log roll in the last 24 hours)
+	# we then read them into a single access and ssl access log prepended with the server name
 	sed -n "/${sed_string}/p" /path/to/logstash/${server}/apache2/access.log >> ${server}_access.log
 	sed -n "/${sed_string}/p" /path/to/logstash/${server}/apache2/access.log.1 >> ${server}_access.log
 	sed -n "/${sed_string}/p" /path/to/logstash/${server}/apache2/ssl_access.log >> ${server}_ssl_access.log
