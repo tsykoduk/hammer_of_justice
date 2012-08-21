@@ -1,4 +1,4 @@
-hammer_of_justice
+Hammer Of Justice
 =================
 
 ### The Hammer of Justice will crush your application
