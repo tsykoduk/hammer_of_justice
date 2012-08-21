@@ -7,4 +7,8 @@ Not really, but it can. It is used to extract lines from Apache logs, format the
 
 ### Usage
 
-Some cool usage stuff will go here.
+We assume several things - all of the log files have been copied to a central location, and that location is accessible to this script. We also assume that the log files are named like "/server1/apache/access.log".
+
+### Disclaimers
+
+This was hacked into place by viking coders. Do not use it. ever. If you do use it, please make sure that you have edited it to fit your environment. If you fail to do this, things *will* go wrong.
